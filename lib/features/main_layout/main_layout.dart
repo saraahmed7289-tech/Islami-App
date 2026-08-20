@@ -4,6 +4,7 @@ import 'package:quran_app_abbas/core/sources/colors_manager.dart';
 import 'package:quran_app_abbas/features/main_layout/tabs/hadith/hadith.dart';
 import 'package:quran_app_abbas/features/main_layout/tabs/sebha/sebha.dart';
 import 'package:quran_app_abbas/features/main_layout/tabs/radio/radio.dart' as MyRadio;
+import 'package:quran_app_abbas/features/main_layout/tabs/time/time.dart';
 
 import 'tabs/quran/quran.dart';
 
@@ -18,6 +19,7 @@ class _MainLayoutState extends State<MainLayout> {
     Hadith(),
     Sebha(),
     MyRadio.Radio(),
+    Time()
 
   ];
 
@@ -26,7 +28,7 @@ class _MainLayoutState extends State<MainLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorsManager.black,
+
       body: tabs[selectedIndex],
       bottomNavigationBar: _buildBottomNavBar
     );
@@ -39,14 +41,10 @@ class _MainLayoutState extends State<MainLayout> {
   }
   Widget get _buildBottomNavBar=>
       BottomNavigationBar(
+
         currentIndex: selectedIndex,
         onTap: _onTab,
-        backgroundColor: ColorsManager.gold,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: ColorsManager.white,
-        unselectedItemColor: ColorsManager.black,
-        showSelectedLabels: true,
-        showUnselectedLabels: false,
+
         items: [
           BottomNavigationBarItem(
               icon: _buildIcon(icon: IconAssets.quran, isSelected: selectedIndex == 0),label: "Quran"),

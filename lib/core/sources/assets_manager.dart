@@ -9,6 +9,7 @@ class ImageAssets{
   static const String imgLeftCorner = "${base}img_left_corner.png";
   static const String imgRightCorner = "${base}img_right_corner.png";
   static const String imgBottomDecoration = "${base}img_bottom_decoration.png";
+  static const String hadithTabBg = "${base}hadith_tab_bg.png";
 }
 
 

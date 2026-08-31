@@ -6,9 +6,15 @@ import 'package:quran_app_abbas/features/main_layout/tabs/quran/widgets/most_rec
 import 'package:quran_app_abbas/features/main_layout/tabs/quran/widgets/sura_item.dart';
 import 'package:quran_app_abbas/models/sura_model.dart';
 
-class Quran extends StatelessWidget {
+class Quran extends StatefulWidget {
   const Quran({super.key});
 
+  @override
+  State<Quran> createState() => _QuranState();
+}
+
+class _QuranState extends State<Quran> {
+  List<SuraModel> filteredList = SuraModel.suras;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,6 +28,9 @@ class Quran extends StatelessWidget {
             Image.asset(ImageAssets.islamiLogo),
             SizedBox(height: context.getHeight * 0.02),
             TextField(
+              onChanged: (input){
+                showFilteredList(input);
+              },
               cursorColor: ColorsManager.ofWhite,
               style: TextStyle(color: ColorsManager.ofWhite, fontSize: 18),
               decoration: InputDecoration(
@@ -34,7 +43,7 @@ class Quran extends StatelessWidget {
             SizedBox(height: 10),
             SizedBox(
               height: context.getHeight * 0.17,
-        
+
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 separatorBuilder: (context, index) => SizedBox(width: 5),
@@ -46,7 +55,7 @@ class Quran extends StatelessWidget {
            shrinkWrap: true,
            physics: NeverScrollableScrollPhysics(),
              itemBuilder: (context, index)=>SuraItem(
-              sura: SuraModel.suras[index],
+              sura: filteredList[index],
              ),
              separatorBuilder: (context, index)=>Container(
                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
@@ -54,12 +63,25 @@ class Quran extends StatelessWidget {
                height: 2,
                color: ColorsManager.ofWhite,
              ),
-             itemCount: 114,
+             itemCount:filteredList.length
               )
-        
+
           ],
         ),
       ),
     );
+  }
+
+  void showFilteredList(String input) {
+    if(input.isEmpty){
+
+      filteredList = SuraModel.suras;
+    }else{
+      filteredList = SuraModel.suras.where((sura)=> sura.suraNameEn.toLowerCase().contains(input.toLowerCase()) || sura.suraNameAr.contains(input)).toList();
+    }
+
+    setState(() {
+
+    });
   }
 }

@@ -3,6 +3,7 @@ import 'package:quran_app_abbas/core/extensions/context_ex.dart';
 import 'package:quran_app_abbas/core/sources/assets_manager.dart';
 import 'package:quran_app_abbas/core/sources/colors_manager.dart';
 import 'package:quran_app_abbas/features/main_layout/tabs/quran/widgets/most_recent_item.dart';
+import 'package:quran_app_abbas/features/main_layout/tabs/quran/widgets/most_recent_list.dart';
 import 'package:quran_app_abbas/features/main_layout/tabs/quran/widgets/sura_item.dart';
 import 'package:quran_app_abbas/models/sura_model.dart';
 
@@ -10,13 +11,16 @@ class Quran extends StatefulWidget {
   const Quran({super.key});
 
   @override
-  State<Quran> createState() => _QuranState();
+  State<Quran> createState() => QuranState();
 }
 
-class _QuranState extends State<Quran> {
+class QuranState extends State<Quran> {
   List<SuraModel> filteredList = SuraModel.suras;
+
   @override
   Widget build(BuildContext context) {
+    print("Entering quran tab build nwww");
+
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(image: AssetImage(ImageAssets.quranTabBg)),
@@ -39,23 +43,16 @@ class _QuranState extends State<Quran> {
               ),
             ),
             SizedBox(height: context.getHeight * 0.02),
-            Text("Most Recently", style: Theme.of(context).textTheme.titleSmall),
-            SizedBox(height: 10),
-            SizedBox(
-              height: context.getHeight * 0.17,
 
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                separatorBuilder: (context, index) => SizedBox(width: 5),
-                itemBuilder: (context, index) => MostRecentItem(),
-                itemCount: 10,
-              ),
-            ),
+          MostRecentList(refreshQuranTab: refreshQuranTab,),
          ListView.separated(
            shrinkWrap: true,
            physics: NeverScrollableScrollPhysics(),
              itemBuilder: (context, index)=>SuraItem(
               sura: filteredList[index],
+               refreshQuranTab: refreshQuranTab,
+
+
              ),
              separatorBuilder: (context, index)=>Container(
                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
@@ -70,6 +67,13 @@ class _QuranState extends State<Quran> {
         ),
       ),
     );
+  }
+
+
+  void refreshQuranTab(){
+    setState(() {
+
+    });
   }
 
   void showFilteredList(String input) {

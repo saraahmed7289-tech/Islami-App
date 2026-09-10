@@ -78,7 +78,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
 
     String fileContent = await rootBundle.loadString(key);
 
-    /// 2 mins
+
 
     List<String> suraLines = fileContent.trim().split('\n');
     for (int i = 0; i < suraLines.length; i++) {

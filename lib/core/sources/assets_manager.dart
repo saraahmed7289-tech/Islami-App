@@ -10,6 +10,15 @@ class ImageAssets{
   static const String imgRightCorner = "${base}img_right_corner.png";
   static const String imgBottomDecoration = "${base}img_bottom_decoration.png";
   static const String hadithTabBg = "${base}hadith_tab_bg.png";
+  static const String onboarding1 = "${base}onborder.png";
+  static const String onboarding2 = "${base}masget.png";
+  static const String onboarding3 = "${base}quran.png";
+  static const String onboarding4 = "${base}sebha.png";
+  static const String onboarding5= "${base}radio.png";
+  static const String SebhaBody= "${base}Sebha_Body 1.png";
+  static const String headsebha = "${base}headsebha.png";
+  static const String sebhaTabBg= "${base}sebha_bg.png";
+
 }
 
 

@@ -1,19 +1,20 @@
 # Islami App 🕌
 
-A Flutter Islamic mobile application built with Dart, featuring a clean and user-friendly interface.
+A Flutter Islamic mobile application built with Dart, focused on providing a simple and user-friendly experience for accessing Islamic content.
 
 ## ✨ Features
 
-- 📖 Islamic content
-- 🎨 Clean and simple user interface
-- 📱 Responsive Flutter UI
-- 🧩 Organized and reusable components
+- 👋 Onboarding
+- 📖 Quran and Surahs
+- 📿 Sebha
+- 🎨 Clean and user-friendly interface
 
 ## 🛠️ Technologies
 
 - Flutter
 - Dart
 - Object-Oriented Programming (OOP)
+- Git & GitHub
 
 ## 🚀 Getting Started
 
@@ -36,5 +37,7 @@ flutter run
 ## 👩‍💻 Developer
 
 **Sara Ahmed**
+
+Computer Science Student | Flutter Developer
 
 [LinkedIn](https://www.linkedin.com/in/sara-ahmed-a907b93b0)

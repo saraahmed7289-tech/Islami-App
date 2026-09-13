@@ -1,16 +1,40 @@
-# quran_app_abbas
+# Islami App 🕌
 
-A new Flutter project.
+A Flutter Islamic mobile application built with Dart, featuring a clean and user-friendly interface.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- 📖 Islamic content
+- 🎨 Clean and simple user interface
+- 📱 Responsive Flutter UI
+- 🧩 Organized and reusable components
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Technologies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter
+- Dart
+- Object-Oriented Programming (OOP)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Getting Started
+
+Make sure you have Flutter installed on your machine.
+
+### Installation
+
+Clone the repository:
+
+https://github.com/saraahmed7289-tech/Islami-App.git
+
+Then run:
+
+flutter pub get
+
+Finally:
+
+flutter run
+
+## 👩‍💻 Developer
+
+**Sara Ahmed**
+
+[LinkedIn](https://www.linkedin.com/in/sara-ahmed-a907b93b0)
